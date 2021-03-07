@@ -35,7 +35,7 @@ symfony composer req security
 symfony composer req orm
 
 # enable sqlite config in .env
-DATABASE_URL="sqlite:///%kernel.project_dir%/var/data.db"
+DATABASE_URL="sqlite:///%kernel.project_dir%/var/data.db"//
 symfony console make:user
 
 symfony composer req annotations 
@@ -47,8 +47,16 @@ symfony console make:migration
 symfony console do:mi:mi -n
 
 symfony composer req orm-fixtures
-symfony console make:fixtures # UserFixtures.php
+symfony console make:fixtures 
+# UserFixtures.php
+# Load the new user with encoded password in fixture file.
+symfon console doctrine:fixtures:load
 
+symfony composer require --dev symfony/profiler-pack
+
+# enable experimental authenticator-based system in security.yaml
+enable_authenticator_manager: true
+# disable 
 
 ```
 
