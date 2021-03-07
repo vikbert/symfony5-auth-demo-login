@@ -58,9 +58,10 @@ $this->denyAccessUnlessGranted('ROLE_USER');
 # update the redirect URL in LoginFormAuthenticator
 new RedirectResponse($this->urlGenerator->generate('app_profile'));
 
-
-
+# complete the implementation in LoginFormAuthenticator
 ```
+
+> more detailed info in `cli-protocol.md`
 
 
 ## licence
