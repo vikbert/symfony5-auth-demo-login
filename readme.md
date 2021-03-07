@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="./docs/symfony.png" width="100" alt="aino" />
+  <img src="./docs/symfony.png" width="100" alt="symfony logo" />
   <h3>Symfony 5 Authentication Demo</h3>
   <p>Login demo with the new authentication flow symfony 5</p>
 
@@ -46,7 +46,8 @@ symfony console debug:router
 symfony console make:migration
 symfony console do:mi:mi -n
 
-
+symfony composer req orm-fixtures
+symfony console make:fixtures # UserFixtures.php
 
 
 ```

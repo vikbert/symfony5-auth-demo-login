@@ -320,4 +320,38 @@ Use the `composer fund` command to find out more!
 [notice] Migrating up to DoctrineMigrations\Version20210307114339
 [notice] finished in 14.8ms, used 14M memory, 1 migrations executed, 3 sql queries
 
+
+➜ scr orm-fixtures
+Using version ^3.4 for doctrine/doctrine-fixtures-bundle
+./composer.json has been updated
+Running composer update doctrine/doctrine-fixtures-bundle
+Loading composer repositories with package information
+Updating dependencies
+Lock file operations: 2 installs, 0 updates, 0 removals
+  - Locking doctrine/data-fixtures (1.5.0)
+  - Locking doctrine/doctrine-fixtures-bundle (3.4.0)
+Writing lock file
+Installing dependencies from lock file (including require-dev)
+Package operations: 2 installs, 0 updates, 0 removals
+  - Installing doctrine/data-fixtures (1.5.0): Extracting archive
+  - Installing doctrine/doctrine-fixtures-bundle (3.4.0): Extracting archive
+Generating optimized autoload files
+composer/package-versions-deprecated: Generating version class...
+composer/package-versions-deprecated: ...done generating version class
+61 packages you are using are looking for funding.
+Use the `composer fund` command to find out more!
+
+Symfony operations: 1 recipe (841a34f574d7ae67a99b5b5e12d0f280)
+  - Configuring doctrine/doctrine-fixtures-bundle (>=3.0): From github.com/symfony/recipes:master
+Executing script cache:clear [OK]
+Executing script assets:install public [OK]
+
+Some files may have been created or updated to configure your new packages.
+Please review, edit and commit them: these files are yours.
+
+Nothing to unpack
+
+
+
+
 ```
