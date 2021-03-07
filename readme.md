@@ -1,7 +1,7 @@
 <div align="center">
   <img src="./docs/symfony.png" width="100" alt="symfony logo" />
   <h3>Symfony 5 Authentication Demo</h3>
-  <p>Login demo with the new authentication flow symfony 5</p>
+  <p>Login demo with the new authentication system in symfony 5</p>
 
   <p>
     <a href="#">
