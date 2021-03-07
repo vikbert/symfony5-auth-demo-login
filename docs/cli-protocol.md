@@ -351,6 +351,46 @@ Please review, edit and commit them: these files are yours.
 
 Nothing to unpack
 
+➜ symfony composer require --dev symfony/profiler-pack
+Using version ^1.0 for symfony/profiler-pack
+./composer.json has been updated
+Running composer update symfony/profiler-pack
+Loading composer repositories with package information
+Restricting packages listed in "symfony/symfony" to "5.2.*"
+Updating dependencies
+Lock file operations: 2 installs, 0 updates, 0 removals
+  - Locking symfony/profiler-pack (v1.0.5)
+  - Locking symfony/web-profiler-bundle (v5.2.4)
+Writing lock file
+Installing dependencies from lock file (including require-dev)
+Package operations: 2 installs, 0 updates, 0 removals
+  - Installing symfony/web-profiler-bundle (v5.2.4): Extracting archive
+  - Installing symfony/profiler-pack (v1.0.5): Extracting archive
+Generating optimized autoload files
+composer/package-versions-deprecated: Generating version class...
+composer/package-versions-deprecated: ...done generating version class
+63 packages you are using are looking for funding.
+Use the `composer fund` command to find out more!
+
+Symfony operations: 1 recipe (04c9deadf19a95506c4df79cbe7c0860)
+  - Configuring symfony/web-profiler-bundle (>=3.3): From github.com/symfony/recipes:master
+Executing script cache:clear [OK]
+Executing script assets:install public [OK]
+
+Some files may have been created or updated to configure your new packages.
+Please review, edit and commit them: these files are yours.
+
+Unpacked symfony/profiler-pack dependencies
+Installing dependencies from lock file (including require-dev)
+Verifying lock file contents can be installed on current platform.
+Package operations: 0 installs, 0 updates, 1 removal
+  - Removing symfony/profiler-pack (v1.0.5)
+62 packages you are using are looking for funding.
+Use the `composer fund` command to find out more!
+
+
+
+
 
 
 
