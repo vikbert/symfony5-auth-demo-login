@@ -1,19 +1,51 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        {# Run `composer require symfony/webpack-encore-bundle`
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Welcome!{% endblock %}</title>
+    {# Run `composer require symfony/webpack-encore-bundle`
            and uncomment the following Encore helpers to start using Symfony UX #}
-        {% block stylesheets %}
-            {#{{ encore_entry_link_tags('app') }}#}
-        {% endblock %}
+    {% block stylesheets %}
+        <link rel="stylesheet" href="https://vikbert.github.io/pixss/build/styles/pixss.min.css"/>
+        {# {{ encore_entry_link_tags('app') }} #}
+    {% endblock %}
 
-        {% block javascripts %}
-            {#{{ encore_entry_script_tags('app') }}#}
-        {% endblock %}
-    </head>
-    <body>
-        {% block body %}{% endblock %}
-    </body>
+    {% block javascripts %}
+        <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+        {# {{ encore_entry_script_tags('app') }} #}
+    {% endblock %}
+</head>
+<body>
+<header class="header">
+    <nav class="topbar">
+        <div class="container space-between">
+            <div>
+                <span class="iconify" data-icon="vscode-icons:file-type-light-symfony" data-inline="false" width="30"></span>
+            </div>
+            <a href={{ path('app_home') }}>
+                <div><strong>Login Authentication</strong></div>
+            </a>
+            <div>
+                {% if is_granted('ROLE_USER') %}
+                    <a href={{ path('app_profile') }}>
+                        <span class="iconify" data-icon="carbon:user-avatar-filled-alt" data-inline="false" width="30"></span>
+                    </a>
+                {% else %}
+                    <a href={{ path('app_login') }}>
+                        <span class="iconify" data-icon="ant-design:login-outlined" data-inline="false" width="30"></span>
+                    </a>
+                {% endif %}
+            </div>
+        </div>
+    </nav>
+</header>
+<main class="main">
+    {% block body %}{% endblock %}
+</main>
+<div class="container centered-xy">
+    <a href="https://github.com/vikbert/">
+        <span class="iconify" data-icon="ant-design:github-filled" data-inline="false" width="60"></span>
+    </a>
+</div>
+</body>
 </html>
