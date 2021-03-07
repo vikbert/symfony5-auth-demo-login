@@ -161,22 +161,22 @@ Use the `composer fund` command to find out more!
 ➜ sc make:user
 
  The name of the security user class (e.g. User) [User]:
- > y
+ > User
 
  Do you want to store user data in the database (via Doctrine)? (yes/no) [yes]:
- > y
+ > yes
 
  Enter a property name that will be the unique "display" name for the user (e.g. email, username, uuid) [email]:
- > 
+ > email
 
  Will this app need to hash/check user passwords? Choose No if passwords are not needed or will be checked/hashed by some other system (e.g. a single sign-on server).
 
  Does this app need to hash/check user passwords? (yes/no) [yes]:
- > y
+ > yes
 
- created: src/Entity/Y.php
- created: src/Repository/YRepository.php
- updated: src/Entity/Y.php
+ created: src/Entity/User.php
+ created: src/Repository/UserRepository.php
+ updated: src/Entity/User.php
  updated: config/packages/security.yaml
 
            
@@ -184,8 +184,8 @@ Use the `composer fund` command to find out more!
            
 
  Next Steps:
-   - Review your new App\Entity\Y class.
-   - Use make:entity to add more fields to your Y entity and then run make:migration.
+   - Review your new App\Entity\User class.
+   - Use make:entity to add more fields to your User entity and then run make:migration.
    - Create a way to authenticate! See https://symfony.com/doc/current/security.html
 
 ➜ scr annotations
@@ -302,5 +302,22 @@ Use the `composer fund` command to find out more!
   app_logout       ANY      ANY      ANY    /logout                   
  ---------------- -------- -------- ------ -------------------------- 
 
+➜ sc make:migration
+
+ Are you sure you wish to continue? (yes/no) [yes]:
+ > yes
+           
+  Success! 
+
+ Next: Review the new migration "migrations/Version20210307114339.php"
+ Then: Run the migration with php bin/console doctrine:migrations:migrate
+ See https://symfony.com/doc/current/bundles/DoctrineMigrationsBundle/index.html
+
+➜ sc do:mi:mi -n
+ [WARNING] You have 1 previously executed migrations in the database that are not registered migrations.      
+
+ >> 2021-03-07 11:38:44 (DoctrineMigrations\Version20210307113831)
+[notice] Migrating up to DoctrineMigrations\Version20210307114339
+[notice] finished in 14.8ms, used 14M memory, 1 migrations executed, 3 sql queries
 
 ```

@@ -36,12 +36,15 @@ symfony composer req orm
 
 # enable sqlite config in .env
 DATABASE_URL="sqlite:///%kernel.project_dir%/var/data.db"
-symfony bin/console make:user
+symfony console make:user
 
 symfony composer req annotations 
 symfony composer req twig
-symfony bin/console make:auth
-symfony bin/console debug:router
+symfony console make:auth
+symfony console debug:router
+
+symfony console make:migration
+symfony console do:mi:mi -n
 
 
 
