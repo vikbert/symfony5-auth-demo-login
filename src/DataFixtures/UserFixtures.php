@@ -10,9 +10,9 @@ use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
 class UserFixtures extends Fixture
 {
     private const DEFAULT_EMAIL = 'test@gmail.com';
-    private const DEFAULT_PASS = 'test1234';
+    private const DEFAULT_PASS = 'test';
 
-    private $passwordEncoder;
+    private UserPasswordEncoderInterface $passwordEncoder;
 
     public function __construct(UserPasswordEncoderInterface $passwordEncoder)
     {
